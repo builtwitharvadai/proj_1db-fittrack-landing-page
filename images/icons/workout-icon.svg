@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="workout-icon-title workout-icon-desc" role="img">
+  <title id="workout-icon-title">Workout Tracking</title>
+  <desc id="workout-icon-desc">Icon representing workout and fitness tracking features</desc>
+  <path d="M6.5 6.5h1v11h-1a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2z" fill="hsl(14 100% 60%)"/>
+  <path d="M16.5 6.5h1a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-1v-11z" fill="hsl(14 100% 60%)"/>
+  <rect x="7.5" y="9.5" width="9" height="5" rx="0.5" fill="hsl(204 100% 40%)"/>
+  <circle cx="5.5" cy="6.5" r="1.5" fill="hsl(14 100% 60%)"/>
+  <circle cx="5.5" cy="17.5" r="1.5" fill="hsl(14 100% 60%)"/>
+  <circle cx="18.5" cy="6.5" r="1.5" fill="hsl(14 100% 60%)"/>
+  <circle cx="18.5" cy="17.5" r="1.5" fill="hsl(14 100% 60%)"/>
+  <line x1="7.5" y1="12" x2="16.5" y2="12" stroke="hsl(0 0% 100%)" stroke-width="1.5"/>
+</svg>

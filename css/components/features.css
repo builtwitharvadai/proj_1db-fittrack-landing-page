@@ -1,0 +1,410 @@
+/* Features Section Styles - Production-ready CSS */
+/* Responsive grid layout with hover effects and accessibility support */
+
+/* ============================================
+   FEATURES SECTION CONTAINER
+   ============================================ */
+
+.features {
+  position: relative;
+  padding-block: var(--space-fluid-2xl);
+  background-color: var(--color-surface);
+}
+
+@media (width >= 768px) {
+  .features {
+    padding-block: var(--space-fluid-3xl);
+  }
+}
+
+/* Section header */
+.features__header {
+  max-width: var(--container-4xl);
+  margin-inline: auto;
+  margin-block-end: var(--space-16);
+  text-align: center;
+}
+
+.features__title {
+  margin-block-end: var(--space-4);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.features__description {
+  max-width: 65ch;
+  margin-inline: auto;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
+/* ============================================
+   FEATURES GRID LAYOUT
+   ============================================ */
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--space-8);
+  max-width: var(--container-7xl);
+  margin-inline: auto;
+}
+
+@media (width >= 640px) {
+  .features__grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-10);
+  }
+}
+
+@media (width >= 768px) {
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 1024px) {
+  .features__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ============================================
+   FEATURE CARD COMPONENT
+   ============================================ */
+
+.feature-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--space-8);
+  background-color: var(--color-surface-elevated);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-all);
+  container-type: inline-size;
+  container-name: feature-card;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-border);
+}
+
+.feature-card:focus-within {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   FEATURE ICON STYLING
+   ============================================ */
+
+.feature-card__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-block-end: var(--space-6);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-100) 0%,
+    var(--color-secondary-100) 100%
+  );
+  border-radius: var(--radius-xl);
+  transition: var(--transition-transform);
+}
+
+.feature-card:hover .feature-card__icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.feature-card__icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-primary-600);
+  transition: var(--transition-colors);
+}
+
+.feature-card:hover .feature-card__icon {
+  color: var(--color-primary-700);
+}
+
+/* Icon SVG styling */
+.feature-card__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ============================================
+   FEATURE CONTENT
+   ============================================ */
+
+.feature-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.feature-card__title {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  transition: var(--transition-colors);
+}
+
+.feature-card:hover .feature-card__title {
+  color: var(--color-primary-600);
+}
+
+.feature-card__description {
+  margin: 0;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
+/* ============================================
+   FEATURE CARD VARIANTS
+   ============================================ */
+
+/* Workout feature - Primary color accent */
+.feature-card--workout .feature-card__icon-wrapper {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-100) 0%,
+    var(--color-primary-200) 100%
+  );
+}
+
+.feature-card--workout:hover .feature-card__icon-wrapper {
+  box-shadow: 0 8px 16px -4px rgba(255, 107, 53, 0.3);
+}
+
+/* Nutrition feature - Accent color */
+.feature-card--nutrition .feature-card__icon-wrapper {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-100) 0%,
+    var(--color-accent-200) 100%
+  );
+}
+
+.feature-card--nutrition .feature-card__icon {
+  color: var(--color-accent-700);
+}
+
+.feature-card--nutrition:hover .feature-card__icon-wrapper {
+  box-shadow: 0 8px 16px -4px rgba(0, 168, 120, 0.3);
+}
+
+/* Progress feature - Secondary color */
+.feature-card--progress .feature-card__icon-wrapper {
+  background: linear-gradient(
+    135deg,
+    var(--color-secondary-100) 0%,
+    var(--color-secondary-200) 100%
+  );
+}
+
+.feature-card--progress .feature-card__icon {
+  color: var(--color-secondary-700);
+}
+
+.feature-card--progress:hover .feature-card__icon-wrapper {
+  box-shadow: 0 8px 16px -4px rgba(0, 78, 137, 0.3);
+}
+
+/* Community feature - Mixed accent */
+.feature-card--community .feature-card__icon-wrapper {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-100) 0%,
+    var(--color-primary-100) 100%
+  );
+}
+
+.feature-card--community .feature-card__icon {
+  color: var(--color-accent-700);
+}
+
+.feature-card--community:hover .feature-card__icon-wrapper {
+  box-shadow: 0 8px 16px -4px rgba(0, 168, 120, 0.3);
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (width >= 640px) {
+  .feature-card {
+    padding: var(--space-10);
+  }
+
+  .feature-card__icon-wrapper {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .feature-card__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+@media (width >= 1024px) {
+  .features__grid {
+    gap: var(--space-8);
+  }
+
+  .feature-card {
+    padding: var(--space-8);
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY ENHANCEMENTS
+   ============================================ */
+
+/* Focus styles for keyboard navigation */
+.feature-card:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* Ensure sufficient color contrast */
+@media (prefers-contrast: high) {
+  .feature-card {
+    border-width: 2px;
+    border-color: var(--color-border-strong);
+  }
+
+  .feature-card__title {
+    color: var(--color-text-primary);
+  }
+
+  .feature-card__description {
+    color: var(--color-text-primary);
+  }
+}
+
+/* ============================================
+   REDUCED MOTION SUPPORT
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-card,
+  .feature-card__icon-wrapper,
+  .feature-card__icon,
+  .feature-card__title {
+    transition: none;
+  }
+
+  .feature-card:hover {
+    transform: none;
+  }
+
+  .feature-card:hover .feature-card__icon-wrapper {
+    transform: none;
+  }
+}
+
+/* ============================================
+   DARK MODE ADJUSTMENTS
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  .features {
+    background-color: var(--color-surface);
+  }
+
+  .feature-card {
+    background-color: var(--color-surface-elevated);
+    border-color: var(--color-border);
+  }
+
+  .feature-card:hover {
+    border-color: var(--color-border-strong);
+  }
+
+  .feature-card__icon-wrapper {
+    background: linear-gradient(
+      135deg,
+      var(--color-primary-900) 0%,
+      var(--color-secondary-900) 100%
+    );
+  }
+
+  .feature-card__icon {
+    color: var(--color-primary-400);
+  }
+
+  .feature-card--nutrition .feature-card__icon-wrapper {
+    background: linear-gradient(
+      135deg,
+      var(--color-accent-900) 0%,
+      var(--color-accent-800) 100%
+    );
+  }
+
+  .feature-card--nutrition .feature-card__icon {
+    color: var(--color-accent-400);
+  }
+
+  .feature-card--progress .feature-card__icon-wrapper {
+    background: linear-gradient(
+      135deg,
+      var(--color-secondary-900) 0%,
+      var(--color-secondary-800) 100%
+    );
+  }
+
+  .feature-card--progress .feature-card__icon {
+    color: var(--color-secondary-400);
+  }
+
+  .feature-card--community .feature-card__icon-wrapper {
+    background: linear-gradient(
+      135deg,
+      var(--color-accent-900) 0%,
+      var(--color-primary-900) 100%
+    );
+  }
+
+  .feature-card--community .feature-card__icon {
+    color: var(--color-accent-400);
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .features {
+    background-color: transparent;
+  }
+
+  .feature-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid var(--color-border);
+  }
+
+  .feature-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
