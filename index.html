@@ -1,237 +1,178 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <!-- Character encoding MUST be first -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>FitTrack - Your Personal Fitness Companion | Track Workouts & Achieve Goals</title>
+  
+  <!-- Viewport for responsive design with touch optimization -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  
+  <!-- Document title with site name -->
+  <title>FitTrack - Your Personal Fitness Companion</title>
+  
+  <!-- Meta descriptions for SEO -->
   <meta name="description" content="Transform your fitness journey with FitTrack. Track workouts, monitor progress, and achieve your health goals with our comprehensive fitness app.">
   
+  <!-- Open Graph for social media -->
   <meta property="og:title" content="FitTrack - Your Personal Fitness Companion">
   <meta property="og:description" content="Transform your fitness journey with FitTrack. Track workouts, monitor progress, and achieve your health goals.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://fittrack.example.com">
   
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="FitTrack - Your Personal Fitness Companion">
-  <meta name="twitter:description" content="Transform your fitness journey with FitTrack. Track workouts, monitor progress, and achieve your health goals.">
+  <!-- DNS prefetch for performance -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   
-  <link rel="canonical" href="https://fittrack.example.com">
+  <!-- Preload critical resources -->
+  <link rel="preload" href="css/variables.css" as="style">
+  <link rel="preload" href="css/reset.css" as="style">
   
-  <link rel="stylesheet" href="css/reset.css">
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/typography.css">
   <link rel="stylesheet" href="css/utilities.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components/navigation.css">
   <link rel="stylesheet" href="css/components/hero.css">
   <link rel="stylesheet" href="css/components/features.css">
   <link rel="stylesheet" href="css/components/workout-plans.css">
   <link rel="stylesheet" href="css/components/testimonials.css">
   <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- Skip navigation for accessibility -->
   <a href="#main" class="skip-link">Skip to main content</a>
-
+  
+  <!-- Fixed Header with Mobile Navigation -->
+  <header class="header" role="banner">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <!-- Logo/Brand -->
+      <a href="#hero" class="nav__logo" aria-label="FitTrack home">
+        FitTrack
+      </a>
+      
+      <!-- Hamburger Menu Button -->
+      <button 
+        type="button"
+        class="nav__toggle"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav__toggle-icon" aria-hidden="true"></span>
+      </button>
+      
+      <!-- Navigation Menu -->
+      <div 
+        id="nav-menu"
+        class="nav__menu"
+        data-visible="false"
+        aria-hidden="true"
+      >
+        <ul class="nav__list" role="list">
+          <li>
+            <a href="#hero" class="nav__link" aria-label="Home">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#features" class="nav__link" aria-label="Features">
+              Features
+            </a>
+          </li>
+          <li>
+            <a href="#workouts" class="nav__link" aria-label="Workout Plans">
+              Workouts
+            </a>
+          </li>
+          <li>
+            <a href="#testimonials" class="nav__link" aria-label="Testimonials">
+              Testimonials
+            </a>
+          </li>
+          <li>
+            <a href="#download" class="nav__cta" aria-label="Download app">
+              Download App
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Mobile Menu Overlay -->
+      <div 
+        class="nav__overlay"
+        data-visible="false"
+        aria-hidden="true"
+      ></div>
+    </nav>
+  </header>
+  
+  <!-- Main Content -->
   <main id="main" role="main">
     <!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section id="hero" class="hero" aria-labelledby="hero-title">
       <div class="hero__container">
         <h1 id="hero-title" class="hero__title">Transform Your Fitness Journey</h1>
         <p class="hero__description">Track workouts, monitor progress, and achieve your health goals with FitTrack</p>
+        <div class="hero__cta">
+          <a href="#download" class="btn btn--primary">Get Started</a>
+          <a href="#features" class="btn btn--secondary">Learn More</a>
+        </div>
       </div>
     </section>
-
+    
     <!-- Features Section -->
-    <section class="features" aria-labelledby="features-title">
+    <section id="features" class="features" aria-labelledby="features-title">
       <div class="features__container">
-        <h2 id="features-title" class="features__title">Everything You Need to Succeed</h2>
+        <h2 id="features-title" class="features__title">Powerful Features</h2>
+        <p class="features__description">Everything you need to reach your fitness goals</p>
+        <div class="features__grid">
+          <!-- Feature cards will be populated here -->
+        </div>
       </div>
     </section>
-
+    
     <!-- Workout Plans Section -->
-    <section class="workout-plans" aria-labelledby="workout-plans-title">
-      <div class="workout-plans__container">
-        <h2 id="workout-plans-title" class="workout-plans__title">Personalized Workout Plans</h2>
+    <section id="workouts" class="workouts" aria-labelledby="workouts-title">
+      <div class="workouts__container">
+        <h2 id="workouts-title" class="workouts__title">Personalized Workout Plans</h2>
+        <p class="workouts__description">Choose the perfect plan for your fitness level</p>
+        <div class="workouts__grid">
+          <!-- Workout plan cards will be populated here -->
+        </div>
       </div>
     </section>
-
+    
     <!-- Testimonials Section -->
-    <section class="testimonials" aria-labelledby="testimonials-title">
+    <section id="testimonials" class="testimonials" aria-labelledby="testimonials-title">
       <div class="testimonials__container">
         <h2 id="testimonials-title" class="testimonials__title">What Our Users Say</h2>
+        <div class="testimonials__carousel">
+          <!-- Testimonial cards will be populated here -->
+        </div>
       </div>
     </section>
-
-    <!-- Final CTA Section -->
-    <section class="final-cta" aria-labelledby="final-cta-title">
-      <div class="final-cta__container">
-        <h2 id="final-cta-title" class="final-cta__heading">Ready to Start Your Fitness Journey?</h2>
-        <p class="final-cta__description">Download FitTrack today and take the first step towards a healthier, stronger you. Available on iOS and Android.</p>
-        <div class="final-cta__badges">
-          <a 
-            href="https://apps.apple.com/app/fittrack" 
-            class="app-badge"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Download FitTrack on the App Store"
-            data-track="app-store-cta"
-          >
-            <img 
-              src="images/badges/app-store-badge.svg" 
-              alt="Download on the App Store" 
-              class="app-badge__image"
-              width="120"
-              height="40"
-            >
-          </a>
-          <a 
-            href="https://play.google.com/store/apps/details?id=com.fittrack" 
-            class="app-badge"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Get FitTrack on Google Play"
-            data-track="google-play-cta"
-          >
-            <img 
-              src="images/badges/google-play-badge.svg" 
-              alt="Get it on Google Play" 
-              class="app-badge__image"
-              width="155"
-              height="60"
-            >
-          </a>
+    
+    <!-- Download Section -->
+    <section id="download" class="download" aria-labelledby="download-title">
+      <div class="download__container">
+        <h2 id="download-title" class="download__title">Download FitTrack Today</h2>
+        <p class="download__description">Available on iOS and Android</p>
+        <div class="download__buttons">
+          <!-- App store buttons will be populated here -->
         </div>
       </div>
     </section>
   </main>
-
+  
   <!-- Footer -->
   <footer class="footer" role="contentinfo">
     <div class="footer__container">
-      <div class="footer__content">
-        <!-- Brand Section -->
-        <div class="footer__brand">
-          <a href="/" class="footer__logo" aria-label="FitTrack home">FitTrack</a>
-          <p class="footer__tagline">Your personal fitness companion for tracking workouts and achieving your health goals.</p>
-          <div class="footer__app-badges">
-            <a 
-              href="https://apps.apple.com/app/fittrack" 
-              class="footer__app-badge"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Download FitTrack on the App Store"
-              data-track="app-store-footer"
-            >
-              <img 
-                src="images/badges/app-store-badge.svg" 
-                alt="Download on the App Store" 
-                class="footer__app-badge-image"
-                width="120"
-                height="40"
-              >
-            </a>
-            <a 
-              href="https://play.google.com/store/apps/details?id=com.fittrack" 
-              class="footer__app-badge"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Get FitTrack on Google Play"
-              data-track="google-play-footer"
-            >
-              <img 
-                src="images/badges/google-play-badge.svg" 
-                alt="Get it on Google Play" 
-                class="footer__app-badge-image"
-                width="155"
-                height="60"
-              >
-            </a>
-          </div>
-        </div>
-
-        <!-- Product Section -->
-        <div class="footer__section">
-          <h3 class="footer__section-title">Product</h3>
-          <nav aria-label="Product links">
-            <ul class="footer__nav" role="list">
-              <li><a href="/features" class="footer__nav-link">Features</a></li>
-              <li><a href="/pricing" class="footer__nav-link">Pricing</a></li>
-              <li><a href="/workouts" class="footer__nav-link">Workout Plans</a></li>
-              <li><a href="/nutrition" class="footer__nav-link">Nutrition Tracking</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <!-- Company Section -->
-        <div class="footer__section">
-          <h3 class="footer__section-title">Company</h3>
-          <nav aria-label="Company links">
-            <ul class="footer__nav" role="list">
-              <li><a href="/about" class="footer__nav-link">About Us</a></li>
-              <li><a href="/blog" class="footer__nav-link">Blog</a></li>
-              <li><a href="/careers" class="footer__nav-link">Careers</a></li>
-              <li><a href="/contact" class="footer__nav-link">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <!-- Connect Section -->
-        <div class="footer__section">
-          <h3 class="footer__section-title">Connect</h3>
-          <div class="footer__social">
-            <a 
-              href="https://facebook.com/fittrack" 
-              class="footer__social-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Follow us on Facebook"
-              data-track="social-facebook"
-            >
-              <svg class="footer__social-icon" aria-hidden="true">
-                <use href="images/icons/social-facebook.svg#icon"></use>
-              </svg>
-            </a>
-            <a 
-              href="https://instagram.com/fittrack" 
-              class="footer__social-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Follow us on Instagram"
-              data-track="social-instagram"
-            >
-              <svg class="footer__social-icon" aria-hidden="true">
-                <use href="images/icons/social-instagram.svg#icon"></use>
-              </svg>
-            </a>
-            <a 
-              href="https://twitter.com/fittrack" 
-              class="footer__social-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Follow us on Twitter"
-              data-track="social-twitter"
-            >
-              <svg class="footer__social-icon" aria-hidden="true">
-                <use href="images/icons/social-twitter.svg#icon"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer Bottom -->
-      <div class="footer__bottom">
-        <p class="footer__copyright">&copy; 2024 FitTrack. All rights reserved.</p>
-        <nav aria-label="Legal links">
-          <ul class="footer__legal" role="list">
-            <li><a href="/privacy" class="footer__legal-link">Privacy Policy</a></li>
-            <li><a href="/terms" class="footer__legal-link">Terms of Service</a></li>
-            <li><a href="/cookies" class="footer__legal-link">Cookie Policy</a></li>
-          </ul>
-        </nav>
-      </div>
+      <p class="footer__copyright">&copy; 2024 FitTrack. All rights reserved.</p>
     </div>
   </footer>
-
+  
+  <!-- Scripts -->
+  <script src="js/navigation.js" defer></script>
   <script src="js/hero-animations.js" defer></script>
   <script src="js/lazy-loading.js" defer></script>
   <script src="js/testimonials-carousel.js" defer></script>
