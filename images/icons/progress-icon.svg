@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="progress-icon-title progress-icon-desc" role="img">
+  <title id="progress-icon-title">Progress Tracking</title>
+  <desc id="progress-icon-desc">Icon representing progress tracking and achievement monitoring</desc>
+  <circle cx="12" cy="12" r="10" stroke="hsl(14 100% 60%)" fill="none"/>
+  <path d="M12 6v6l4 2" stroke="hsl(14 100% 60%)" fill="none"/>
+  <path d="M16 16l-4-4" stroke="hsl(164 100% 47%)" fill="none"/>
+  <circle cx="12" cy="12" r="2" fill="hsl(164 100% 47%)"/>
+  <path d="M12 2a10 10 0 0 1 8.66 5" stroke="hsl(204 100% 48%)" stroke-width="3" fill="none"/>
+</svg>
