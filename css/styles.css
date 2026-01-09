@@ -1,0 +1,564 @@
+/* FitTrack Landing Page - Main Stylesheet */
+/* Production-ready CSS with complete design system integration */
+
+/* ============================================
+   IMPORT ORDER - Critical for cascade
+   ============================================
+   
+   1. reset.css - Normalize browser defaults
+   2. variables.css - Design tokens and CSS custom properties
+   3. typography.css - Font system and text styles
+   4. utilities.css - Utility classes for layout and spacing
+   5. styles.css (this file) - Global styles and components
+   
+   This order ensures proper cascade and prevents specificity issues.
+*/
+
+@import url('./reset.css');
+@import url('./variables.css');
+@import url('./typography.css');
+@import url('./utilities.css');
+
+/* ============================================
+   GLOBAL BASE STYLES
+   ============================================ */
+
+/* Body - Foundation styles */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Main content wrapper */
+main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+/* ============================================
+   CONTAINER SYSTEM
+   ============================================ */
+
+/* Primary container with responsive padding */
+.container {
+  width: 100%;
+  max-width: var(--container-7xl);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+@media (width >= 640px) {
+  .container {
+    padding-inline: var(--space-6);
+  }
+}
+
+@media (width >= 768px) {
+  .container {
+    padding-inline: var(--space-8);
+  }
+}
+
+@media (width >= 1024px) {
+  .container {
+    padding-inline: var(--space-12);
+  }
+}
+
+/* Narrow container for content-focused sections */
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-4xl);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+/* Wide container for full-width sections */
+.container-wide {
+  width: 100%;
+  max-width: var(--container-full);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+/* ============================================
+   SECTION SPACING
+   ============================================ */
+
+/* Standard section padding */
+section {
+  padding-block: var(--space-fluid-xl);
+}
+
+@media (width >= 768px) {
+  section {
+    padding-block: var(--space-fluid-2xl);
+  }
+}
+
+@media (width >= 1024px) {
+  section {
+    padding-block: var(--space-fluid-3xl);
+  }
+}
+
+/* Section with background */
+.section-bg {
+  background-color: var(--color-surface);
+}
+
+/* Section with gradient background */
+.section-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-50) 0%,
+    var(--color-secondary-50) 100%
+  );
+}
+
+/* ============================================
+   BUTTON COMPONENTS
+   ============================================ */
+
+/* Base button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: var(--transition-all);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Primary button - Main CTA */
+.btn-primary {
+  background-color: var(--color-primary-600);
+  color: var(--color-neutral-0);
+  box-shadow: var(--shadow-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-700);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  background-color: var(--color-primary-800);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(0);
+}
+
+/* Secondary button */
+.btn-secondary {
+  background-color: var(--color-secondary-600);
+  color: var(--color-neutral-0);
+  box-shadow: var(--shadow-secondary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-700);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Outline button */
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary-600);
+  border: 2px solid var(--color-primary-600);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary-50);
+  border-color: var(--color-primary-700);
+  color: var(--color-primary-700);
+}
+
+/* Large button variant */
+.btn-lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--font-size-lg);
+}
+
+/* Small button variant */
+.btn-sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+/* Disabled button state */
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ============================================
+   CARD COMPONENTS
+   ============================================ */
+
+/* Base card styles */
+.card {
+  background-color: var(--color-surface-elevated);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-base);
+  transition: var(--transition-all);
+  container-type: inline-size;
+  container-name: card;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+/* Card with border */
+.card-bordered {
+  border: 1px solid var(--color-border);
+}
+
+/* Card header */
+.card-header {
+  margin-block-end: var(--space-4);
+  padding-block-end: var(--space-4);
+  border-block-end: 1px solid var(--color-border-light);
+}
+
+/* Card body */
+.card-body {
+  padding-block: var(--space-4);
+}
+
+/* Card footer */
+.card-footer {
+  margin-block-start: var(--space-4);
+  padding-block-start: var(--space-4);
+  border-block-start: 1px solid var(--color-border-light);
+}
+
+/* ============================================
+   BADGE COMPONENTS
+   ============================================ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.badge-primary {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+}
+
+.badge-secondary {
+  background-color: var(--color-secondary-100);
+  color: var(--color-secondary-800);
+}
+
+.badge-accent {
+  background-color: var(--color-accent-100);
+  color: var(--color-accent-800);
+}
+
+.badge-success {
+  background-color: var(--color-success-light);
+  color: var(--color-success-dark);
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+
+/* Input fields */
+.input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: var(--transition-colors);
+}
+
+.input:hover {
+  border-color: var(--color-border-strong);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+/* Textarea */
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Select dropdown */
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-3) center;
+  padding-inline-end: var(--space-10);
+}
+
+/* Form label */
+.label {
+  display: block;
+  margin-block-end: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+/* Form group */
+.form-group {
+  margin-block-end: var(--space-6);
+}
+
+/* ============================================
+   HERO SECTION STYLES
+   ============================================ */
+
+.hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-block: var(--space-20);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(255, 107, 53, 0.1) 0%,
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 70% 80%,
+    rgba(0, 168, 120, 0.1) 0%,
+    transparent 50%
+  );
+  z-index: -1;
+}
+
+/* ============================================
+   FEATURE GRID
+   ============================================ */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: var(--space-8);
+}
+
+@media (width >= 768px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 1024px) {
+  .feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================
+   ICON STYLES
+   ============================================ */
+
+.icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.icon-lg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.icon-xl {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* ============================================
+   DIVIDER
+   ============================================ */
+
+.divider {
+  height: 1px;
+  background-color: var(--color-border-light);
+  border: none;
+  margin-block: var(--space-8);
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+
+.loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  display: grid;
+  place-items: center;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in var(--transition-duration-slow) var(--transition-timing-ease-out);
+}
+
+.animate-slide-up {
+  animation: slide-up var(--transition-duration-slow) var(--transition-timing-ease-out);
+}
+
+/* ============================================
+   DARK MODE ADJUSTMENTS
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  .section-gradient {
+    background: linear-gradient(
+      135deg,
+      var(--color-primary-900) 0%,
+      var(--color-secondary-900) 100%
+    );
+  }
+  
+  .card {
+    background-color: var(--color-surface);
+  }
+  
+  .input,
+  .select,
+  .textarea {
+    background-color: var(--color-surface);
+  }
+}
+
+/* ============================================
+   REDUCED MOTION SUPPORT
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .card,
+  .input {
+    transition: none;
+  }
+  
+  .animate-fade-in,
+  .animate-slide-up {
+    animation: none;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .btn,
+  .badge {
+    border: 1px solid currentColor;
+  }
+  
+  .card {
+    box-shadow: none;
+    border: 1px solid var(--color-border);
+  }
+  
+  .hero::before {
+    display: none;
+  }
+}
