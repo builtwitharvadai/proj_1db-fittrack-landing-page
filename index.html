@@ -4,149 +4,233 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>FitTrack - Your Personal Fitness Companion</title>
-  <meta name="description" content="Transform your fitness journey with FitTrack. Track workouts, monitor nutrition, visualize progress, and join a supportive community. Download now for iOS and Android.">
+  <meta name="description" content="Transform your fitness journey with FitTrack. Track workouts, monitor progress, and achieve your health goals with our comprehensive fitness app.">
   
-  <link rel="stylesheet" href="css/reset.css">
+  <link rel="preload" href="css/variables.css" as="style">
+  <link rel="preload" href="css/reset.css" as="style">
+  
   <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/typography.css">
   <link rel="stylesheet" href="css/utilities.css">
   <link rel="stylesheet" href="css/components/hero.css">
   <link rel="stylesheet" href="css/components/features.css">
+  <link rel="stylesheet" href="css/components/workout-plans.css">
   <link rel="stylesheet" href="css/styles.css">
-  
-  <script type="module" src="js/hero-animations.js" defer></script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-  
+
   <main id="main" role="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__container">
+      <div class="container">
         <div class="hero__content">
-          <h1 id="hero-title" class="hero__title">
-            Transform Your Fitness Journey
-          </h1>
-          <p class="hero__description">
-            Track workouts, monitor nutrition, and achieve your goals with FitTrack - your personal fitness companion.
-          </p>
+          <h1 id="hero-title" class="hero__title">Transform Your Fitness Journey</h1>
+          <p class="hero__subtitle">Track workouts, monitor progress, and achieve your health goals with FitTrack</p>
           <div class="hero__cta">
-            <a href="#download" class="btn btn--primary">
-              Get Started Free
-            </a>
-            <a href="#features" class="btn btn--secondary">
-              Learn More
-            </a>
+            <a href="#download" class="btn btn--primary">Get Started Free</a>
+            <a href="#features" class="btn btn--secondary">Learn More</a>
           </div>
         </div>
       </div>
     </section>
 
     <section id="features" class="features" aria-labelledby="features-title">
-      <div class="features__header">
-        <h2 id="features-title" class="features__title">
-          Everything You Need to Succeed
-        </h2>
-        <p class="features__description">
-          Powerful features designed to help you reach your fitness goals faster and stay motivated every step of the way.
-        </p>
-      </div>
-
-      <div class="features__grid">
-        <article class="feature-card feature-card--workout">
-          <div class="feature-card__icon-wrapper">
-            <div class="feature-card__icon" role="img" aria-labelledby="workout-title">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M6.5 6.5h1v11h-1a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2z" fill="hsl(14 100% 60%)"/>
-                <path d="M16.5 6.5h1a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-1v-11z" fill="hsl(14 100% 60%)"/>
-                <rect x="7.5" y="9.5" width="9" height="5" rx="0.5" fill="hsl(204 100% 40%)"/>
-                <circle cx="5.5" cy="6.5" r="1.5" fill="hsl(14 100% 60%)"/>
-                <circle cx="5.5" cy="17.5" r="1.5" fill="hsl(14 100% 60%)"/>
-                <circle cx="18.5" cy="6.5" r="1.5" fill="hsl(14 100% 60%)"/>
-                <circle cx="18.5" cy="17.5" r="1.5" fill="hsl(14 100% 60%)"/>
-                <line x1="7.5" y1="12" x2="16.5" y2="12" stroke="hsl(0 0% 100%)" stroke-width="1.5"/>
+      <div class="container">
+        <h2 id="features-title" class="features__title">Everything You Need to Succeed</h2>
+        <div class="features__grid">
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
               </svg>
             </div>
-          </div>
-          <div class="feature-card__content">
-            <h3 id="workout-title" class="feature-card__title">
-              Track Every Rep
-            </h3>
-            <p class="feature-card__description">
-              Log your workouts with ease. Track sets, reps, and weights to monitor your strength gains and stay consistent with your training routine.
-            </p>
-          </div>
-        </article>
-
-        <article class="feature-card feature-card--nutrition">
-          <div class="feature-card__icon-wrapper">
-            <div class="feature-card__icon" role="img" aria-labelledby="nutrition-title">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="hsl(14 100% 60%)"/>
-                <path d="M12 2v20" stroke="hsl(164 100% 33%)" stroke-width="1.5"/>
-                <path d="M12 2c-2.5 0-4.5 4.48-4.5 10s2 10 4.5 10" stroke="hsl(164 100% 33%)" stroke-width="1.5" fill="none"/>
-                <path d="M12 2c2.5 0 4.5 4.48 4.5 10s-2 10-4.5 10" stroke="hsl(164 100% 33%)" stroke-width="1.5" fill="none"/>
-                <ellipse cx="12" cy="12" rx="10" ry="4" stroke="hsl(164 100% 33%)" stroke-width="1.5" fill="none"/>
-                <path d="M8 8c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2V8z" fill="hsl(0 0% 100%)" opacity="0.9"/>
-                <circle cx="10" cy="8.5" r="0.5" fill="hsl(14 100% 60%)"/>
-                <circle cx="14" cy="8.5" r="0.5" fill="hsl(14 100% 60%)"/>
-                <path d="M10 9.5c.5.3 1.3.5 2 .5s1.5-.2 2-.5" stroke="hsl(14 100% 60%)" stroke-width="0.5" fill="none"/>
+            <h3 class="feature-card__title">Workout Tracking</h3>
+            <p class="feature-card__description">Log exercises, sets, and reps with our intuitive interface</p>
+          </article>
+          
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 20V10M12 20V4M6 20v-6"/>
               </svg>
             </div>
-          </div>
-          <div class="feature-card__content">
-            <h3 id="nutrition-title" class="feature-card__title">
-              Fuel Your Success
-            </h3>
-            <p class="feature-card__description">
-              Monitor your nutrition and calorie intake. Get personalized meal suggestions and track macros to optimize your diet for better results.
-            </p>
-          </div>
-        </article>
-
-        <article class="feature-card feature-card--progress">
-          <div class="feature-card__icon-wrapper">
-            <div class="feature-card__icon" role="img" aria-labelledby="progress-title">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10" stroke="hsl(14 100% 60%)" fill="none"/>
-                <path d="M12 6v6l4 2" stroke="hsl(14 100% 60%)" fill="none"/>
-                <path d="M16 16l-4-4" stroke="hsl(164 100% 47%)" fill="none"/>
-                <circle cx="12" cy="12" r="2" fill="hsl(164 100% 47%)"/>
-                <path d="M12 2a10 10 0 0 1 8.66 5" stroke="hsl(204 100% 48%)" stroke-width="3" fill="none"/>
-              </svg>
-            </div>
-          </div>
-          <div class="feature-card__content">
-            <h3 id="progress-title" class="feature-card__title">
-              See Your Progress
-            </h3>
-            <p class="feature-card__description">
-              Visualize your fitness journey with detailed charts and statistics. Celebrate milestones and stay motivated as you watch your progress unfold.
-            </p>
-          </div>
-        </article>
-
-        <article class="feature-card feature-card--community">
-          <div class="feature-card__icon-wrapper">
-            <div class="feature-card__icon" role="img" aria-labelledby="community-title">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <h3 class="feature-card__title">Progress Analytics</h3>
+            <p class="feature-card__description">Visualize your improvements with detailed charts and insights</p>
+          </article>
+          
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                 <circle cx="9" cy="7" r="4"/>
-                <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
-                <circle cx="17" cy="7" r="2"/>
-                <path d="M21 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
               </svg>
             </div>
-          </div>
-          <div class="feature-card__content">
-            <h3 id="community-title" class="feature-card__title">
-              Join the Community
-            </h3>
-            <p class="feature-card__description">
-              Connect with like-minded fitness enthusiasts. Share achievements, get support, and stay accountable with a community that celebrates your wins.
-            </p>
-          </div>
-        </article>
+            <h3 class="feature-card__title">Community Support</h3>
+            <p class="feature-card__description">Connect with fitness enthusiasts and share your journey</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="workout-plans" class="workout-plans" aria-labelledby="workout-plans-title">
+      <div class="container">
+        <header class="workout-plans__header">
+          <h2 id="workout-plans-title" class="workout-plans__title">Discover Your Perfect Workout</h2>
+          <p class="workout-plans__subtitle">Choose from expertly designed programs tailored to your fitness level and goals</p>
+        </header>
+
+        <div class="workout-plans__grid">
+          <article class="workout-card">
+            <div class="workout-card__image-wrapper">
+              <img 
+                class="workout-card__image"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect fill='%23e5e7eb' width='1' height='1'/%3E%3C/svg%3E"
+                data-src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=500&fit=crop&q=80"
+                alt="High-intensity interval training workout"
+                loading="lazy"
+                width="800"
+                height="500"
+              >
+              <div class="workout-card__image-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="workout-card__content">
+              <h3 class="workout-card__title">HIIT Blast</h3>
+              <div class="workout-card__meta">
+                <span class="workout-card__meta-item">
+                  <svg class="workout-card__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  30 min
+                </span>
+                <span class="workout-card__difficulty workout-card__difficulty--intermediate">Intermediate</span>
+              </div>
+              <p class="workout-card__description">Torch calories and boost metabolism with explosive high-intensity intervals designed to maximize fat burn in minimal time.</p>
+              <a href="#download" class="workout-card__cta">
+                Start Training
+                <svg class="workout-card__cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="workout-card">
+            <div class="workout-card__image-wrapper">
+              <img 
+                class="workout-card__image"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect fill='%23e5e7eb' width='1' height='1'/%3E%3C/svg%3E"
+                data-src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=500&fit=crop&q=80"
+                alt="Strength training with weights"
+                loading="lazy"
+                width="800"
+                height="500"
+              >
+              <div class="workout-card__image-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="workout-card__content">
+              <h3 class="workout-card__title">Strength Builder</h3>
+              <div class="workout-card__meta">
+                <span class="workout-card__meta-item">
+                  <svg class="workout-card__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  45 min
+                </span>
+                <span class="workout-card__difficulty workout-card__difficulty--advanced">Advanced</span>
+              </div>
+              <p class="workout-card__description">Build lean muscle and increase power with progressive resistance training that targets all major muscle groups for balanced development.</p>
+              <a href="#download" class="workout-card__cta">
+                Start Training
+                <svg class="workout-card__cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="workout-card">
+            <div class="workout-card__image-wrapper">
+              <img 
+                class="workout-card__image"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect fill='%23e5e7eb' width='1' height='1'/%3E%3C/svg%3E"
+                data-src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=500&fit=crop&q=80"
+                alt="Peaceful yoga practice session"
+                loading="lazy"
+                width="800"
+                height="500"
+              >
+              <div class="workout-card__image-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="workout-card__content">
+              <h3 class="workout-card__title">Yoga Flow</h3>
+              <div class="workout-card__meta">
+                <span class="workout-card__meta-item">
+                  <svg class="workout-card__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  40 min
+                </span>
+                <span class="workout-card__difficulty workout-card__difficulty--beginner">Beginner</span>
+              </div>
+              <p class="workout-card__description">Enhance flexibility, balance, and mindfulness through flowing sequences that connect breath with movement for total body wellness.</p>
+              <a href="#download" class="workout-card__cta">
+                Start Training
+                <svg class="workout-card__cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="workout-card">
+            <div class="workout-card__image-wrapper">
+              <img 
+                class="workout-card__image"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect fill='%23e5e7eb' width='1' height='1'/%3E%3C/svg%3E"
+                data-src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&h=500&fit=crop&q=80"
+                alt="Energetic cardio running workout"
+                loading="lazy"
+                width="800"
+                height="500"
+              >
+              <div class="workout-card__image-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="workout-card__content">
+              <h3 class="workout-card__title">Cardio Burn</h3>
+              <div class="workout-card__meta">
+                <span class="workout-card__meta-item">
+                  <svg class="workout-card__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  35 min
+                </span>
+                <span class="workout-card__difficulty workout-card__difficulty--intermediate">Intermediate</span>
+              </div>
+              <p class="workout-card__description">Elevate your heart rate and improve endurance with dynamic cardio exercises that keep you moving and motivated throughout.</p>
+              <a href="#download" class="workout-card__cta">
+                Start Training
+                <svg class="workout-card__cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   </main>
+
+  <script src="js/hero-animations.js" defer></script>
+  <script src="js/lazy-loading.js" defer></script>
 </body>
 </html>
