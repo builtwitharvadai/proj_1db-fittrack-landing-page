@@ -4,71 +4,100 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>FitTrack - Your Personal Fitness Companion</title>
-  <meta name="description" content="Transform your fitness journey with FitTrack. Track workouts, monitor progress, and achieve your health goals with our comprehensive fitness app.">
+  <meta name="description" content="Transform your fitness journey with FitTrack. Track workouts, monitor nutrition, and achieve your health goals with our comprehensive fitness app.">
   
-  <link rel="preload" href="css/variables.css" as="style">
-  <link rel="preload" href="css/reset.css" as="style">
+  <meta property="og:title" content="FitTrack - Your Personal Fitness Companion">
+  <meta property="og:description" content="Transform your fitness journey with FitTrack. Track workouts, monitor nutrition, and achieve your health goals.">
+  <meta property="og:type" content="website">
   
-  <link rel="stylesheet" href="css/variables.css">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/typography.css">
   <link rel="stylesheet" href="css/utilities.css">
   <link rel="stylesheet" href="css/components/hero.css">
   <link rel="stylesheet" href="css/components/features.css">
   <link rel="stylesheet" href="css/components/workout-plans.css">
+  <link rel="stylesheet" href="css/components/testimonials.css">
   <link rel="stylesheet" href="css/styles.css">
+  
+  <script src="js/hero-animations.js" defer></script>
+  <script src="js/lazy-loading.js" defer></script>
+  <script src="js/testimonials-carousel.js" defer></script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-
+  
+  <header role="banner">
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="/" aria-label="FitTrack home">FitTrack</a>
+        </div>
+        <ul role="list" class="nav-menu">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#workout-plans">Workout Plans</a></li>
+          <li><a href="#testimonials">Success Stories</a></li>
+          <li><a href="#download" class="nav-cta">Download App</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
   <main id="main" role="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="container">
-        <div class="hero__content">
-          <h1 id="hero-title" class="hero__title">Transform Your Fitness Journey</h1>
-          <p class="hero__subtitle">Track workouts, monitor progress, and achieve your health goals with FitTrack</p>
-          <div class="hero__cta">
-            <a href="#download" class="btn btn--primary">Get Started Free</a>
-            <a href="#features" class="btn btn--secondary">Learn More</a>
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 id="hero-title" class="hero-title">Transform Your Fitness Journey</h1>
+          <p class="hero-description">Track workouts, monitor nutrition, and achieve your health goals with FitTrack - your personal fitness companion.</p>
+          <div class="hero-cta">
+            <a href="#download" class="btn btn-primary">Get Started Free</a>
+            <a href="#features" class="btn btn-secondary">Learn More</a>
           </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/hero-phone.png" alt="FitTrack app interface showing workout tracking" loading="eager" width="600" height="800">
         </div>
       </div>
     </section>
 
     <section id="features" class="features" aria-labelledby="features-title">
       <div class="container">
-        <h2 id="features-title" class="features__title">Everything You Need to Succeed</h2>
-        <div class="features__grid">
+        <h2 id="features-title" class="section-title">Everything You Need to Succeed</h2>
+        <div class="features-grid">
           <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">
+            <div class="feature-icon" aria-hidden="true">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
               </svg>
             </div>
-            <h3 class="feature-card__title">Workout Tracking</h3>
-            <p class="feature-card__description">Log exercises, sets, and reps with our intuitive interface</p>
+            <h3 class="feature-title">Workout Tracking</h3>
+            <p class="feature-description">Log exercises, sets, and reps with our intuitive interface. Track your progress over time.</p>
           </article>
           
           <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">
+            <div class="feature-icon" aria-hidden="true">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 20V10M12 20V4M6 20v-6"/>
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
               </svg>
             </div>
-            <h3 class="feature-card__title">Progress Analytics</h3>
-            <p class="feature-card__description">Visualize your improvements with detailed charts and insights</p>
+            <h3 class="feature-title">Nutrition Monitoring</h3>
+            <p class="feature-description">Track calories, macros, and meals. Get personalized nutrition recommendations.</p>
           </article>
           
           <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">
+            <div class="feature-icon" aria-hidden="true">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="8.5" cy="7" r="4"></circle>
+                <path d="M20 8v6M23 11h-6"></path>
               </svg>
             </div>
-            <h3 class="feature-card__title">Community Support</h3>
-            <p class="feature-card__description">Connect with fitness enthusiasts and share your journey</p>
+            <h3 class="feature-title">Community Support</h3>
+            <p class="feature-description">Connect with fitness enthusiasts, share achievements, and stay motivated together.</p>
           </article>
         </div>
       </div>
@@ -76,161 +105,243 @@
 
     <section id="workout-plans" class="workout-plans" aria-labelledby="workout-plans-title">
       <div class="container">
-        <header class="workout-plans__header">
-          <h2 id="workout-plans-title" class="workout-plans__title">Discover Your Perfect Workout</h2>
-          <p class="workout-plans__subtitle">Choose from expertly designed programs tailored to your fitness level and goals</p>
-        </header>
-
-        <div class="workout-plans__grid">
-          <article class="workout-card">
-            <div class="workout-card__image-wrapper">
-              <img 
-                class="workout-card__image"
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect fill='%23e5e7eb' width='1' height='1'/%3E%3C/svg%3E"
-                data-src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=500&fit=crop&q=80"
-                alt="High-intensity interval training workout"
-                loading="lazy"
-                width="800"
-                height="500"
-              >
-              <div class="workout-card__image-overlay" aria-hidden="true"></div>
-            </div>
-            <div class="workout-card__content">
-              <h3 class="workout-card__title">HIIT Blast</h3>
-              <div class="workout-card__meta">
-                <span class="workout-card__meta-item">
-                  <svg class="workout-card__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"/>
-                    <polyline points="12 6 12 12 16 14"/>
-                  </svg>
-                  30 min
-                </span>
-                <span class="workout-card__difficulty workout-card__difficulty--intermediate">Intermediate</span>
-              </div>
-              <p class="workout-card__description">Torch calories and boost metabolism with explosive high-intensity intervals designed to maximize fat burn in minimal time.</p>
-              <a href="#download" class="workout-card__cta">
-                Start Training
-                <svg class="workout-card__cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"/>
-                  <polyline points="12 5 19 12 12 19"/>
-                </svg>
-              </a>
-            </div>
+        <h2 id="workout-plans-title" class="section-title">Personalized Workout Plans</h2>
+        <p class="section-description">Choose from expertly designed programs tailored to your fitness level and goals.</p>
+        <div class="plans-grid">
+          <article class="plan-card">
+            <h3 class="plan-title">Beginner Strength</h3>
+            <p class="plan-duration">4 weeks • 3 days/week</p>
+            <p class="plan-description">Build a solid foundation with fundamental strength training exercises.</p>
+            <ul class="plan-features" role="list">
+              <li>Full body workouts</li>
+              <li>Progressive overload</li>
+              <li>Video demonstrations</li>
+            </ul>
           </article>
-
-          <article class="workout-card">
-            <div class="workout-card__image-wrapper">
-              <img 
-                class="workout-card__image"
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect fill='%23e5e7eb' width='1' height='1'/%3E%3C/svg%3E"
-                data-src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=500&fit=crop&q=80"
-                alt="Strength training with weights"
-                loading="lazy"
-                width="800"
-                height="500"
-              >
-              <div class="workout-card__image-overlay" aria-hidden="true"></div>
-            </div>
-            <div class="workout-card__content">
-              <h3 class="workout-card__title">Strength Builder</h3>
-              <div class="workout-card__meta">
-                <span class="workout-card__meta-item">
-                  <svg class="workout-card__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"/>
-                    <polyline points="12 6 12 12 16 14"/>
-                  </svg>
-                  45 min
-                </span>
-                <span class="workout-card__difficulty workout-card__difficulty--advanced">Advanced</span>
-              </div>
-              <p class="workout-card__description">Build lean muscle and increase power with progressive resistance training that targets all major muscle groups for balanced development.</p>
-              <a href="#download" class="workout-card__cta">
-                Start Training
-                <svg class="workout-card__cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"/>
-                  <polyline points="12 5 19 12 12 19"/>
-                </svg>
-              </a>
-            </div>
+          
+          <article class="plan-card plan-card-featured">
+            <span class="plan-badge">Most Popular</span>
+            <h3 class="plan-title">Weight Loss Pro</h3>
+            <p class="plan-duration">8 weeks • 5 days/week</p>
+            <p class="plan-description">Comprehensive program combining cardio and strength for maximum fat loss.</p>
+            <ul class="plan-features" role="list">
+              <li>HIIT workouts</li>
+              <li>Meal planning</li>
+              <li>Progress tracking</li>
+            </ul>
           </article>
-
-          <article class="workout-card">
-            <div class="workout-card__image-wrapper">
-              <img 
-                class="workout-card__image"
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect fill='%23e5e7eb' width='1' height='1'/%3E%3C/svg%3E"
-                data-src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=500&fit=crop&q=80"
-                alt="Peaceful yoga practice session"
-                loading="lazy"
-                width="800"
-                height="500"
-              >
-              <div class="workout-card__image-overlay" aria-hidden="true"></div>
-            </div>
-            <div class="workout-card__content">
-              <h3 class="workout-card__title">Yoga Flow</h3>
-              <div class="workout-card__meta">
-                <span class="workout-card__meta-item">
-                  <svg class="workout-card__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"/>
-                    <polyline points="12 6 12 12 16 14"/>
-                  </svg>
-                  40 min
-                </span>
-                <span class="workout-card__difficulty workout-card__difficulty--beginner">Beginner</span>
-              </div>
-              <p class="workout-card__description">Enhance flexibility, balance, and mindfulness through flowing sequences that connect breath with movement for total body wellness.</p>
-              <a href="#download" class="workout-card__cta">
-                Start Training
-                <svg class="workout-card__cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"/>
-                  <polyline points="12 5 19 12 12 19"/>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <article class="workout-card">
-            <div class="workout-card__image-wrapper">
-              <img 
-                class="workout-card__image"
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect fill='%23e5e7eb' width='1' height='1'/%3E%3C/svg%3E"
-                data-src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&h=500&fit=crop&q=80"
-                alt="Energetic cardio running workout"
-                loading="lazy"
-                width="800"
-                height="500"
-              >
-              <div class="workout-card__image-overlay" aria-hidden="true"></div>
-            </div>
-            <div class="workout-card__content">
-              <h3 class="workout-card__title">Cardio Burn</h3>
-              <div class="workout-card__meta">
-                <span class="workout-card__meta-item">
-                  <svg class="workout-card__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"/>
-                    <polyline points="12 6 12 12 16 14"/>
-                  </svg>
-                  35 min
-                </span>
-                <span class="workout-card__difficulty workout-card__difficulty--intermediate">Intermediate</span>
-              </div>
-              <p class="workout-card__description">Elevate your heart rate and improve endurance with dynamic cardio exercises that keep you moving and motivated throughout.</p>
-              <a href="#download" class="workout-card__cta">
-                Start Training
-                <svg class="workout-card__cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"/>
-                  <polyline points="12 5 19 12 12 19"/>
-                </svg>
-              </a>
-            </div>
+          
+          <article class="plan-card">
+            <h3 class="plan-title">Muscle Building</h3>
+            <p class="plan-duration">12 weeks • 4 days/week</p>
+            <p class="plan-description">Advanced hypertrophy program for serious muscle gains.</p>
+            <ul class="plan-features" role="list">
+              <li>Split routines</li>
+              <li>Nutrition guidance</li>
+              <li>Recovery protocols</li>
+            </ul>
           </article>
         </div>
       </div>
     </section>
-  </main>
 
-  <script src="js/hero-animations.js" defer></script>
-  <script src="js/lazy-loading.js" defer></script>
+    <section id="testimonials" class="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <h2 id="testimonials-title" class="section-title">Real Results from Real People</h2>
+        <p class="section-description">Join thousands who have transformed their lives with FitTrack</p>
+        
+        <div class="testimonials-carousel" role="region" aria-label="User testimonials carousel" aria-roledescription="carousel">
+          <div class="testimonials-carousel__track" role="list">
+            <div class="testimonials-carousel__slide" role="listitem" aria-roledescription="slide" aria-label="Testimonial 1 of 5">
+              <article class="testimonial-card">
+                <div class="testimonial-card__header">
+                  <div class="testimonial-card__photo">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=faces" alt="Sarah Martinez" loading="lazy" width="64" height="64">
+                  </div>
+                  <div class="testimonial-card__user">
+                    <h3 class="testimonial-card__name">Sarah Martinez</h3>
+                    <p class="testimonial-card__achievement">Lost 35 lbs in 4 months</p>
+                  </div>
+                </div>
+                <div class="testimonial-card__content">
+                  <blockquote class="testimonial-card__quote">
+                    FitTrack completely changed my approach to fitness. The workout tracking and nutrition features helped me stay accountable and see real progress. I've never felt stronger or more confident!
+                  </blockquote>
+                  <div class="testimonial-card__metrics">
+                    <span class="testimonial-card__metric">35 lbs lost</span>
+                    <span class="testimonial-card__metric">4 months</span>
+                    <span class="testimonial-card__metric">150+ workouts</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="testimonials-carousel__slide" role="listitem" aria-roledescription="slide" aria-label="Testimonial 2 of 5">
+              <article class="testimonial-card">
+                <div class="testimonial-card__header">
+                  <div class="testimonial-card__photo">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=faces" alt="Michael Chen" loading="lazy" width="64" height="64">
+                  </div>
+                  <div class="testimonial-card__user">
+                    <h3 class="testimonial-card__name">Michael Chen</h3>
+                    <p class="testimonial-card__achievement">Gained 20 lbs muscle mass</p>
+                  </div>
+                </div>
+                <div class="testimonial-card__content">
+                  <blockquote class="testimonial-card__quote">
+                    As someone who struggled to gain weight, FitTrack's muscle building program was exactly what I needed. The progressive overload tracking and nutrition guidance helped me finally see the gains I wanted.
+                  </blockquote>
+                  <div class="testimonial-card__metrics">
+                    <span class="testimonial-card__metric">20 lbs gained</span>
+                    <span class="testimonial-card__metric">6 months</span>
+                    <span class="testimonial-card__metric">200+ workouts</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="testimonials-carousel__slide" role="listitem" aria-roledescription="slide" aria-label="Testimonial 3 of 5">
+              <article class="testimonial-card">
+                <div class="testimonial-card__header">
+                  <div class="testimonial-card__photo">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces" alt="Emily Johnson" loading="lazy" width="64" height="64">
+                  </div>
+                  <div class="testimonial-card__user">
+                    <h3 class="testimonial-card__name">Emily Johnson</h3>
+                    <p class="testimonial-card__achievement">Completed first marathon</p>
+                  </div>
+                </div>
+                <div class="testimonial-card__content">
+                  <blockquote class="testimonial-card__quote">
+                    Training for my first marathon seemed impossible until I found FitTrack. The running programs and progress tracking kept me motivated through every mile. Crossed that finish line feeling amazing!
+                  </blockquote>
+                  <div class="testimonial-card__metrics">
+                    <span class="testimonial-card__metric">Marathon completed</span>
+                    <span class="testimonial-card__metric">5 months training</span>
+                    <span class="testimonial-card__metric">500+ miles</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="testimonials-carousel__slide" role="listitem" aria-roledescription="slide" aria-label="Testimonial 4 of 5">
+              <article class="testimonial-card">
+                <div class="testimonial-card__header">
+                  <div class="testimonial-card__photo">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces" alt="David Thompson" loading="lazy" width="64" height="64">
+                  </div>
+                  <div class="testimonial-card__user">
+                    <h3 class="testimonial-card__name">David Thompson</h3>
+                    <p class="testimonial-card__achievement">Reduced body fat by 12%</p>
+                  </div>
+                </div>
+                <div class="testimonial-card__content">
+                  <blockquote class="testimonial-card__quote">
+                    The combination of strength training and nutrition tracking in FitTrack helped me transform my body composition. I'm leaner, stronger, and more energetic than I've been in years. This app is a game-changer!
+                  </blockquote>
+                  <div class="testimonial-card__metrics">
+                    <span class="testimonial-card__metric">12% body fat lost</span>
+                    <span class="testimonial-card__metric">3 months</span>
+                    <span class="testimonial-card__metric">120+ workouts</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="testimonials-carousel__slide" role="listitem" aria-roledescription="slide" aria-label="Testimonial 5 of 5">
+              <article class="testimonial-card">
+                <div class="testimonial-card__header">
+                  <div class="testimonial-card__photo">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=faces" alt="Jessica Williams" loading="lazy" width="64" height="64">
+                  </div>
+                  <div class="testimonial-card__user">
+                    <h3 class="testimonial-card__name">Jessica Williams</h3>
+                    <p class="testimonial-card__achievement">Improved overall wellness</p>
+                  </div>
+                </div>
+                <div class="testimonial-card__content">
+                  <blockquote class="testimonial-card__quote">
+                    FitTrack isn't just about workouts - it's a complete lifestyle transformation. The community support and holistic approach to health helped me build sustainable habits. I feel better than ever at 45!
+                  </blockquote>
+                  <div class="testimonial-card__metrics">
+                    <span class="testimonial-card__metric">Better sleep</span>
+                    <span class="testimonial-card__metric">More energy</span>
+                    <span class="testimonial-card__metric">Consistent routine</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <button class="testimonials-carousel__nav testimonials-carousel__nav--prev" type="button" aria-label="Previous testimonial" aria-controls="testimonials-carousel-track">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <button class="testimonials-carousel__nav testimonials-carousel__nav--next" type="button" aria-label="Next testimonial" aria-controls="testimonials-carousel-track">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+
+          <div class="testimonials-carousel__controls">
+            <button class="testimonials-carousel__play-pause" type="button" aria-label="Pause auto-play" data-state="pause">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+              </svg>
+            </button>
+          </div>
+
+          <div class="testimonials-carousel__dots" role="tablist" aria-label="Testimonial navigation">
+            <button class="testimonials-carousel__dot is-active" type="button" role="tab" aria-label="Go to testimonial 1" aria-controls="testimonials-carousel-track" aria-selected="true"></button>
+            <button class="testimonials-carousel__dot" type="button" role="tab" aria-label="Go to testimonial 2" aria-controls="testimonials-carousel-track" aria-selected="false"></button>
+            <button class="testimonials-carousel__dot" type="button" role="tab" aria-label="Go to testimonial 3" aria-controls="testimonials-carousel-track" aria-selected="false"></button>
+            <button class="testimonials-carousel__dot" type="button" role="tab" aria-label="Go to testimonial 4" aria-controls="testimonials-carousel-track" aria-selected="false"></button>
+            <button class="testimonials-carousel__dot" type="button" role="tab" aria-label="Go to testimonial 5" aria-controls="testimonials-carousel-track" aria-selected="false"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="download-cta" aria-labelledby="download-title">
+      <div class="container">
+        <h2 id="download-title" class="section-title">Start Your Transformation Today</h2>
+        <p class="section-description">Download FitTrack now and get your first month free</p>
+        <div class="download-buttons">
+          <a href="#" class="download-button" aria-label="Download on the App Store">
+            <img src="images/badges/app-store-badge.svg" alt="Download on the App Store" width="180" height="60">
+          </a>
+          <a href="#" class="download-button" aria-label="Get it on Google Play">
+            <img src="images/badges/google-play-badge.svg" alt="Get it on Google Play" width="180" height="60">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>FitTrack</h3>
+          <p>Your personal fitness companion</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul role="list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#workout-plans">Workout Plans</a></li>
+            <li><a href="#testimonials">Success Stories</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 FitTrack. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
