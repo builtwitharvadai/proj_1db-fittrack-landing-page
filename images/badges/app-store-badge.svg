@@ -1,0 +1,26 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="app-store-badge-title app-store-badge-desc">
+  <title id="app-store-badge-title">Download on the App Store</title>
+  <desc id="app-store-badge-desc">Download FitTrack from the Apple App Store</desc>
+  
+  <!-- Background -->
+  <rect width="120" height="40" rx="5" fill="#000000"/>
+  
+  <!-- Apple Logo -->
+  <g transform="translate(10, 8)">
+    <path d="M18.7144 12.9524C18.6571 9.85714 21.1429 8.35714 21.2571 8.28571C19.8286 6.28571 17.6 6 16.8286 5.97143C15.0857 5.78571 13.4 6.97143 12.5143 6.97143C11.6 6.97143 10.2286 6 8.77143 6.02857C6.88571 6.05714 5.11429 7.11429 4.11429 8.77143C2.05714 12.1429 3.6 17.1429 5.57143 19.9143C6.54286 21.2571 7.71429 22.7714 9.25714 22.7143C10.6857 22.6571 11.2286 21.8286 12.9429 21.8286C14.6286 21.8286 15.1429 22.7143 16.6286 22.6857C18.1714 22.6571 19.1714 21.3143 20.1143 19.9714C21.2286 18.4286 21.6857 16.9143 21.7143 16.8286C21.6857 16.8 18.7714 15.7143 18.7144 12.9524Z" fill="white"/>
+    <path d="M15.9429 4.28571C16.7429 3.31429 17.2857 2 17.1429 0.685714C16.0286 0.742857 14.6571 1.48571 13.8286 2.42857C13.0857 3.25714 12.4286 4.62857 12.6 5.91429C13.8571 6 15.1429 5.25714 15.9429 4.28571Z" fill="white"/>
+  </g>
+  
+  <!-- Text -->
+  <g transform="translate(35, 8)">
+    <!-- "Download on the" text -->
+    <text x="0" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7" fill="white" font-weight="400">
+      Download on the
+    </text>
+    
+    <!-- "App Store" text -->
+    <text x="0" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="white" font-weight="600">
+      App Store
+    </text>
+  </g>
+</svg>
