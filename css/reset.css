@@ -1,0 +1,363 @@
+/* Modern CSS Reset - Production Ready */
+/* Based on modern reset practices with accessibility and performance optimizations */
+
+/* Box sizing reset with inheritance pattern */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Root element optimizations */
+html {
+  /* Prevent font size inflation on mobile */
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  
+  /* Smooth scrolling with reduced motion support */
+  scroll-behavior: smooth;
+  
+  /* Better font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
+  /* Prevent horizontal overflow */
+  overflow-x: hidden;
+}
+
+/* Respect user's reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Body defaults */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Improved heading defaults */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+/* Paragraph text wrapping */
+p {
+  text-wrap: pretty;
+  max-width: 75ch;
+}
+
+/* List styles reset */
+ul,
+ol {
+  list-style: none;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Anchor defaults */
+a {
+  color: inherit;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Button reset */
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* Form element defaults */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid currentColor;
+}
+
+/* Remove default fieldset styles */
+fieldset {
+  border: none;
+}
+
+/* Improved media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent images from overflowing */
+img {
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
+}
+
+/* SVG defaults */
+svg {
+  fill: currentColor;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+/* Table defaults */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+/* Improved focus styles for accessibility */
+:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Remove focus outline for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Improved text selection */
+::selection {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: inherit;
+}
+
+/* Remove animations for elements that shouldn't animate */
+dialog {
+  border: none;
+  padding: 0;
+}
+
+/* Improved iframe defaults */
+iframe {
+  border: none;
+}
+
+/* Address element styling */
+address {
+  font-style: normal;
+}
+
+/* Blockquote defaults */
+blockquote {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after {
+  content: "";
+  content: none;
+}
+
+/* Code and pre defaults */
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  font-size: 1em;
+}
+
+pre {
+  overflow: auto;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+/* Abbreviation defaults */
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+/* Mark element */
+mark {
+  background-color: rgba(255, 255, 0, 0.4);
+  color: inherit;
+}
+
+/* Small text */
+small {
+  font-size: 0.875em;
+}
+
+/* Subscript and superscript */
+sub,
+sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Hidden attribute support */
+[hidden] {
+  display: none !important;
+}
+
+/* Disabled elements */
+[disabled],
+[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Skip link for keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: 100;
+  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  * {
+    border-color: currentColor;
+  }
+  
+  img {
+    opacity: 0.9;
+  }
+}
+
+/* Print styles */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+  }
+  
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  
+  img {
+    page-break-inside: avoid;
+  }
+  
+  h2,
+  h3,
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
