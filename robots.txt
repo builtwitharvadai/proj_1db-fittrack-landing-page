@@ -1,0 +1,17 @@
+# FitTrack Landing Page - Robots.txt
+# This file provides instructions to search engine crawlers about which pages
+# they can and cannot access on the website.
+
+# Allow all search engines to crawl all content
+User-agent: *
+Allow: /
+
+# Sitemap location for search engines to discover all pages
+Sitemap: https://fittrack.example.com/sitemap.xml
+
+# Optional: Crawl-delay can be added if needed to prevent server overload
+# Crawl-delay: 10
+
+# Note: This configuration allows full access to all search engines.
+# Adjust the Allow/Disallow directives if you need to restrict access
+# to specific directories or files in the future.

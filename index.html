@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  <title>FitTrack - Your Personal Fitness Companion | Track Workouts & Achieve Goals</title>
+  <meta name="description" content="FitTrack helps you track workouts, monitor progress, and achieve your fitness goals with personalized workout plans and real-time analytics.">
+  
+  <meta property="og:title" content="FitTrack - Your Personal Fitness Companion">
+  <meta property="og:description" content="Track workouts, monitor progress, and achieve your fitness goals with personalized workout plans and real-time analytics.">
+  <meta property="og:image" content="https://fittrack.example.com/images/og-image.jpg">
+  <meta property="og:url" content="https://fittrack.example.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FitTrack">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FitTrack - Your Personal Fitness Companion">
+  <meta name="twitter:description" content="Track workouts, monitor progress, and achieve your fitness goals with personalized workout plans.">
+  <meta name="twitter:image" content="https://fittrack.example.com/images/twitter-card.jpg">
+  
+  <link rel="canonical" href="https://fittrack.example.com">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  
+  <meta name="theme-color" content="#6366f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: dark)">
+  
+  <link rel="stylesheet" href="css/main.css">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FitTrack",
+    "url": "https://fittrack.example.com",
+    "logo": "https://fittrack.example.com/images/logo.png",
+    "description": "Personal fitness tracking application for workout monitoring and goal achievement",
+    "sameAs": [
+      "https://twitter.com/fittrack",
+      "https://facebook.com/fittrack",
+      "https://instagram.com/fittrack"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "email": "support@fittrack.example.com"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "FitTrack",
+    "url": "https://fittrack.example.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://fittrack.example.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <header role="banner">
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="/" class="logo" aria-label="FitTrack home">
+          <img src="images/logo.svg" alt="FitTrack" width="150" height="40">
+        </a>
+        
+        <button 
+          type="button" 
+          class="mobile-menu-toggle" 
+          aria-expanded="false" 
+          aria-controls="main-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="hamburger-icon" aria-hidden="true"></span>
+        </button>
+        
+        <ul id="main-menu" class="nav-menu" role="list">
+          <li><a href="#features" aria-label="View features">Features</a></li>
+          <li><a href="#workout-plans" aria-label="Browse workout plans">Workout Plans</a></li>
+          <li><a href="#testimonials" aria-label="Read testimonials">Testimonials</a></li>
+          <li><a href="#pricing" aria-label="View pricing">Pricing</a></li>
+          <li><a href="#download" class="btn-primary" aria-label="Download app">Download App</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <main id="main" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 id="hero-title">Transform Your Fitness Journey with FitTrack</h1>
+          <p class="hero-subtitle">Track workouts, monitor progress, and achieve your fitness goals with personalized plans and real-time analytics. Join thousands of users reaching their peak performance.</p>
+          
+          <div class="hero-cta">
+            <a href="#download" class="btn-primary btn-large" aria-label="Download FitTrack app">
+              Get Started Free
+            </a>
+            <a href="#features" class="btn-secondary btn-large" aria-label="Learn more about features">
+              Learn More
+            </a>
+          </div>
+          
+          <div class="hero-stats" role="list" aria-label="App statistics">
+            <div class="stat-item" role="listitem">
+              <strong aria-label="50,000 plus active users">50,000+</strong>
+              <span>Active Users</span>
+            </div>
+            <div class="stat-item" role="listitem">
+              <strong aria-label="4.8 star rating">4.8★</strong>
+              <span>App Rating</span>
+            </div>
+            <div class="stat-item" role="listitem">
+              <strong aria-label="1 million plus workouts tracked">1M+</strong>
+              <span>Workouts Tracked</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <img 
+            src="images/hero-app-mockup.png" 
+            alt="FitTrack app interface showing workout tracking dashboard with exercise statistics and progress charts"
+            width="600"
+            height="700"
+            loading="eager"
+            fetchpriority="high"
+          >
+        </div>
+      </div>
+    </section>
+    
+    <section id="features" class="features" aria-labelledby="features-title">
+      <div class="section-container">
+        <header class="section-header">
+          <h2 id="features-title">Powerful Features for Your Fitness Success</h2>
+          <p class="section-subtitle">Everything you need to track, analyze, and optimize your workouts in one comprehensive platform.</p>
+        </header>
+        
+        <div class="features-grid" role="list">
+          <article class="feature-card" role="listitem">
+            <div class="feature-icon" aria-hidden="true">
+              <img src="images/icon-workout-tracking.svg" alt="" width="64" height="64">
+            </div>
+            <h3>Smart Workout Tracking</h3>
+            <p>Log exercises with ease using our intuitive interface. Track sets, reps, weight, and rest times with automatic progression suggestions.</p>
+          </article>
+          
+          <article class="feature-card" role="listitem">
+            <div class="feature-icon" aria-hidden="true">
+              <img src="images/icon-analytics.svg" alt="" width="64" height="64">
+            </div>
+            <h3>Real-Time Analytics</h3>
+            <p>Visualize your progress with detailed charts and insights. Monitor strength gains, volume trends, and personal records over time.</p>
+          </article>
+          
+          <article class="feature-card" role="listitem">
+            <div class="feature-icon" aria-hidden="true">
+              <img src="images/icon-plans.svg" alt="" width="64" height="64">
+            </div>
+            <h3>Personalized Plans</h3>
+            <p>Get custom workout programs tailored to your goals, experience level, and available equipment. Adaptive plans that evolve with you.</p>
+          </article>
+          
+          <article class="feature-card" role="listitem">
+            <div class="feature-icon" aria-hidden="true">
+              <img src="images/icon-nutrition.svg" alt="" width="64" height="64">
+            </div>
+            <h3>Nutrition Tracking</h3>
+            <p>Monitor your macros and calories with our comprehensive food database. Sync with popular nutrition apps for seamless tracking.</p>
+          </article>
+          
+          <article class="feature-card" role="listitem">
+            <div class="feature-icon" aria-hidden="true">
+              <img src="images/icon-community.svg" alt="" width="64" height="64">
+            </div>
+            <h3>Community Support</h3>
+            <p>Connect with like-minded fitness enthusiasts. Share achievements, get motivation, and participate in challenges together.</p>
+          </article>
+          
+          <article class="feature-card" role="listitem">
+            <div class="feature-icon" aria-hidden="true">
+              <img src="images/icon-sync.svg" alt="" width="64" height="64">
+            </div>
+            <h3>Multi-Device Sync</h3>
+            <p>Access your data anywhere with cloud synchronization. Seamlessly switch between phone, tablet, and web without missing a beat.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section id="workout-plans" class="workout-plans" aria-labelledby="plans-title">
+      <div class="section-container">
+        <header class="section-header">
+          <h2 id="plans-title">Workout Plans for Every Goal</h2>
+          <p class="section-subtitle">Choose from expertly designed programs or create your own custom routines.</p>
+        </header>
+        
+        <div class="plans-grid" role="list">
+          <article class="plan-card" role="listitem">
+            <img 
+              src="images/plan-strength.jpg" 
+              alt="Person performing barbell squat in gym"
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="plan-content">
+              <h3>Strength Building</h3>
+              <p class="plan-description">Progressive overload programs focused on compound movements to build maximum strength and muscle mass.</p>
+              <ul class="plan-features" role="list">
+                <li>4-6 week cycles</li>
+                <li>3-5 sessions per week</li>
+                <li>Beginner to advanced levels</li>
+              </ul>
+              <a href="#download" class="btn-outline" aria-label="Start strength building program">Start Program</a>
+            </div>
+          </article>
+          
+          <article class="plan-card" role="listitem">
+            <img 
+              src="images/plan-cardio.jpg" 
+              alt="Runner on outdoor trail at sunrise"
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="plan-content">
+              <h3>Cardio & Endurance</h3>
+              <p class="plan-description">Improve cardiovascular fitness and stamina with structured running, cycling, and HIIT programs.</p>
+              <ul class="plan-features" role="list">
+                <li>Customizable intensity</li>
+                <li>Heart rate zone training</li>
+                <li>Race preparation plans</li>
+              </ul>
+              <a href="#download" class="btn-outline" aria-label="Start cardio and endurance program">Start Program</a>
+            </div>
+          </article>
+          
+          <article class="plan-card" role="listitem">
+            <img 
+              src="images/plan-weight-loss.jpg" 
+              alt="Person doing high-intensity interval training workout"
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="plan-content">
+              <h3>Weight Loss</h3>
+              <p class="plan-description">Combine effective workouts with nutrition guidance to achieve sustainable fat loss and body recomposition.</p>
+              <ul class="plan-features" role="list">
+                <li>Calorie deficit strategies</li>
+                <li>Metabolic conditioning</li>
+                <li>Nutrition integration</li>
+              </ul>
+              <a href="#download" class="btn-outline" aria-label="Start weight loss program">Start Program</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section id="testimonials" class="testimonials" aria-labelledby="testimonials-title">
+      <div class="section-container">
+        <header class="section-header">
+          <h2 id="testimonials-title">Success Stories from Our Community</h2>
+          <p class="section-subtitle">Real results from real people who transformed their fitness with FitTrack.</p>
+        </header>
+        
+        <div class="testimonials-carousel" role="region" aria-label="User testimonials carousel">
+          <div class="testimonials-track" role="list">
+            <article class="testimonial-card" role="listitem">
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <blockquote>
+                <p>"FitTrack completely changed how I approach my workouts. The analytics helped me identify weak points and the personalized plans kept me motivated. I've gained 15 pounds of muscle in 6 months!"</p>
+              </blockquote>
+              <footer class="testimonial-author">
+                <img 
+                  src="images/testimonial-sarah.jpg" 
+                  alt="Sarah Johnson profile photo"
+                  width="60"
+                  height="60"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <div class="author-info">
+                  <cite>Sarah Johnson</cite>
+                  <span class="author-title">Fitness Enthusiast</span>
+                </div>
+              </footer>
+            </article>
+            
+            <article class="testimonial-card" role="listitem">
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <blockquote>
+                <p>"As a busy professional, I needed something simple yet effective. FitTrack's quick logging and smart suggestions make it easy to stay consistent. Down 30 pounds and feeling amazing!"</p>
+              </blockquote>
+              <footer class="testimonial-author">
+                <img 
+                  src="images/testimonial-michael.jpg" 
+                  alt="Michael Chen profile photo"
+                  width="60"
+                  height="60"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <div class="author-info">
+                  <cite>Michael Chen</cite>
+                  <span class="author-title">Software Engineer</span>
+                </div>
+              </footer>
+            </article>
+            
+            <article class="testimonial-card" role="listitem">
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <blockquote>
+                <p>"The community feature is incredible! Sharing progress and competing in challenges keeps me accountable. FitTrack isn't just an app, it's a lifestyle change."</p>
+              </blockquote>
+              <footer class="testimonial-author">
+                <img 
+                  src="images/testimonial-emily.jpg" 
+                  alt="Emily Rodriguez profile photo"
+                  width="60"
+                  height="60"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <div class="author-info">
+                  <cite>Emily Rodriguez</cite>
+                  <span class="author-title">Personal Trainer</span>
+                </div>
+              </footer>
+            </article>
+          </div>
+          
+          <div class="carousel-controls" role="group" aria-label="Testimonials navigation">
+            <button 
+              type="button" 
+              class="carousel-btn carousel-prev" 
+              aria-label="Previous testimonial"
+            >
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button 
+              type="button" 
+              class="carousel-btn carousel-next" 
+              aria-label="Next testimonial"
+            >
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
+          
+          <div class="carousel-indicators" role="tablist" aria-label="Testimonial slides">
+            <button 
+              type="button" 
+              role="tab" 
+              aria-selected="true" 
+              aria-label="Show testimonial 1"
+              class="indicator active"
+            ></button>
+            <button 
+              type="button" 
+              role="tab" 
+              aria-selected="false" 
+              aria-label="Show testimonial 2"
+              class="indicator"
+            ></button>
+            <button 
+              type="button" 
+              role="tab" 
+              aria-selected="false" 
+              aria-label="Show testimonial 3"
+              class="indicator"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="download" class="cta-section" aria-labelledby="cta-title">
+      <div class="cta-container">
+        <div class="cta-content">
+          <h2 id="cta-title">Ready to Start Your Fitness Journey?</h2>
+          <p class="cta-subtitle">Download FitTrack today and get your first month of premium features free. No credit card required.</p>
+          
+          <div class="app-badges" role="list" aria-label="Download options">
+            <a 
+              href="https://apps.apple.com/app/fittrack" 
+              class="app-badge"
+              role="listitem"
+              aria-label="Download on the App Store"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img 
+                src="images/badge-app-store.svg" 
+                alt="Download on the App Store"
+                width="180"
+                height="60"
+                loading="lazy"
+                decoding="async"
+              >
+            </a>
+            <a 
+              href="https://play.google.com/store/apps/details?id=com.fittrack" 
+              class="app-badge"
+              role="listitem"
+              aria-label="Get it on Google Play"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img 
+                src="images/badge-google-play.svg" 
+                alt="Get it on Google Play"
+                width="180"
+                height="60"
+                loading="lazy"
+                decoding="async"
+              >
+            </a>
+          </div>
+          
+          <p class="cta-note">Available on iOS 14+ and Android 8+</p>
+        </div>
+        
+        <div class="cta-image">
+          <img 
+            src="images/cta-phones.png" 
+            alt="FitTrack app displayed on iPhone and Android devices showing workout tracking interface"
+            width="500"
+            height="600"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img src="images/logo-white.svg" alt="FitTrack" width="150" height="40">
+          <p class="footer-tagline">Your personal fitness companion for achieving peak performance.</p>
+          
+          <div class="social-links" role="list" aria-label="Social media links">
+            <a 
+              href="https://twitter.com/fittrack" 
+              aria-label="Follow us on Twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+              role="listitem"
+            >
+              <img src="images/icon-twitter.svg" alt="" width="24" height="24" aria-hidden="true">
+            </a>
+            <a 
+              href="https://facebook.com/fittrack" 
+              aria-label="Follow us on Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+              role="listitem"
+            >
+              <img src="images/icon-facebook.svg" alt="" width="24" height="24" aria-hidden="true">
+            </a>
+            <a 
+              href="https://instagram.com/fittrack" 
+              aria-label="Follow us on Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              role="listitem"
+            >
+              <img src="images/icon-instagram.svg" alt="" width="24" height="24" aria-hidden="true">
+            </a>
+            <a 
+              href="https://youtube.com/fittrack" 
+              aria-label="Subscribe on YouTube"
+              target="_blank"
+              rel="noopener noreferrer"
+              role="listitem"
+            >
+              <img src="images/icon-youtube.svg" alt="" width="24" height="24" aria-hidden="true">
+            </a>
+          </div>
+        </div>
+        
+        <nav class="footer-links" aria-label="Footer navigation">
+          <div class="footer-column">
+            <h3>Product</h3>
+            <ul role="list">
+              <li><a href="#features">Features</a></li>
+              <li><a href="#workout-plans">Workout Plans</a></li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li><a href="/download">Download</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h3>Company</h3>
+            <ul role="list">
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/careers">Careers</a></li>
+              <li><a href="/press">Press Kit</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h3>Support</h3>
+            <ul role="list">
+              <li><a href="/help">Help Center</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/faq">FAQ</a></li>
+              <li><a href="/community">Community</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h3>Legal</h3>
+            <ul role="list">
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of Service</a></li>
+              <li><a href="/cookies">Cookie Policy</a></li>
+              <li><a href="/licenses">Licenses</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2024 FitTrack, Inc. All rights reserved.</p>
+        <p class="footer-disclaimer">FitTrack is not a substitute for professional medical advice. Consult your physician before starting any fitness program.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="js/main.js" defer></script>
+</body>
+</html>
